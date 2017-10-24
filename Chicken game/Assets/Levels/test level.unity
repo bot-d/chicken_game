@@ -234,6 +234,9 @@ GameObject:
   - component: {fileID: 81688659}
   - component: {fileID: 81688658}
   - component: {fileID: 81688657}
+  - component: {fileID: 81688663}
+  - component: {fileID: 81688662}
+  - component: {fileID: 81688661}
   m_Layer: 0
   m_Name: Chicky
   m_TagString: Untagged
@@ -305,6 +308,47 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &81688661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 81688656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca25dd5bdf8621c439e90b461229f737, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
+  moveSpeed: 12
+  target: {fileID: 0}
+--- !u!54 &81688662
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 81688656}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &81688663
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 81688656}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 20, y: 1, z: 20}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &311587649
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,7 +432,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 311587649}
   m_LocalRotation: {x: 0.13052616, y: -0, z: -0, w: 0.9914449}
-  m_LocalPosition: {x: 0, y: 4.53, z: -10}
+  m_LocalPosition: {x: 0, y: 8.718, z: -12.351}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5479746}
@@ -552,7 +596,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 560482624}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.98, y: 0.24, z: 19.772596}
+  m_LocalPosition: {x: -4.98, y: 0.24, z: 19.76}
   m_LocalScale: {x: 1.0257508, y: 0.4546795, z: 0.4546795}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1123,7 +1167,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1294541849}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.48, y: 0.24, z: 19.772596}
+  m_LocalPosition: {x: -6.42, y: 0.24, z: 19.76}
   m_LocalScale: {x: 1.0257508, y: 0.4546795, z: 0.4546795}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1222,6 +1266,9 @@ GameObject:
   - component: {fileID: 1738481581}
   - component: {fileID: 1738481580}
   - component: {fileID: 1738481579}
+  - component: {fileID: 1738481584}
+  - component: {fileID: 1738481583}
+  - component: {fileID: 1738481585}
   m_Layer: 0
   m_Name: Wolf
   m_TagString: Untagged
@@ -1293,6 +1340,47 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1738481583
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1738481578}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 30, y: 1, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1738481584
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1738481578}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1738481585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1738481578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a848fb6b87e02048aa24c4a68bd884b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
+  moveSpeed: 12
+  target: {fileID: 0}
 --- !u!1 &1963921715
 GameObject:
   m_ObjectHideFlags: 0
@@ -1372,7 +1460,7 @@ Transform:
   m_GameObject: {fileID: 1963921715}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 104.75999, y: 104.76003, z: 104.76003}
+  m_LocalScale: {x: 24, y: 24, z: 24}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -1453,7 +1541,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2003343360}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.41, y: 0.24, z: 19.772596}
+  m_LocalPosition: {x: -3.59, y: 0.24, z: 19.7}
   m_LocalScale: {x: 1.0257508, y: 0.4546795, z: 0.4546795}
   m_Children: []
   m_Father: {fileID: 0}
