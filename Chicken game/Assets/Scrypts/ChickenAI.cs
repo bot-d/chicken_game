@@ -7,11 +7,12 @@ public class ChickenAI : MonoBehaviour {
 	// Use this for initialization
 	
 
-public Rigidbody enemy; 
-
 public float moveSpeed; 
 
+public Transform enemy;
 public Transform target; 
+
+public Transform chickenPen;
 
 void OnTriggerStay(Collider other)
 {
@@ -24,9 +25,14 @@ void OnTriggerStay(Collider other)
 	
 }
 
-		
-	
-	
-	// Update is called once per frame
-	
+ void OnCollisionEnter(Collision other)
+	{
+		if(other.gameObject.name == "player"){
+
+
+			transform.position = chickenPen.position;
+			transform.rotation = chickenPen.rotation;
+		}
+	}
+
 }
