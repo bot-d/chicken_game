@@ -9,13 +9,13 @@ public class ChickenAI : MonoBehaviour {
 
 public float moveSpeed; 
 
-public Transform enemy;
 public Transform target; 
 
 public Transform chickenPen;
 
-void OnTriggerStay(Collider other)
-{
+public int points = 10; 
+
+void OnTriggerStay(Collider other){
 
 	if(other.gameObject.name == "Player"){
 		transform.LookAt(target);
@@ -25,11 +25,11 @@ void OnTriggerStay(Collider other)
 	
 }
 
- void OnCollisionEnter(Collision other)
-	{
+ void OnCollisionEnter(Collision other){
 		if(other.gameObject.name == "player"){
-
-
+			//add points to score
+			ScoreManager.AddPoints(points);
+			//send chicken to pen.
 			transform.position = chickenPen.position;
 			transform.rotation = chickenPen.rotation;
 		}
