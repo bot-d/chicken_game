@@ -7,26 +7,41 @@ public class WolfAI : MonoBehaviour {
 	// Use this for initialization
 	
 
-public Rigidbody enemy; 
-
 public float moveSpeed; 
 
 public Transform target; 
+
+public int damage;
+
+public 
 
 void OnTriggerStay(Collider other)
 {
 
 	if(other.gameObject.name == "Player"){
 		transform.LookAt(target);
-		transform.Translate(Vector3.forward*+moveSpeed*Time.deltaTime);
-
+		transform.Translate(Vector3.forward*moveSpeed*Time.deltaTime);
 	}
+}	
+	void OnCollisionEnter(Collision other){
 	
+		
+
+		print("The Wolf is attacking");
+			var hit = other.gameObject;
+			var health = hit.GetComponent<playerHealth>();
+	
+		if(health != null){
+			health.TakeDamage(damage);
+		}
+			
+	}
+
 }
+	
+
 
 		
 	
 	
-	// Update is called once per frame
 	
-}
