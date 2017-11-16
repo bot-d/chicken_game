@@ -27,17 +27,23 @@ void OnTriggerStay(Collider other)
 	
 		
 
-		print("The Wolf is attacking");
+			if(other.gameObject.name == "player"){
 			var hit = other.gameObject;
 			var health = hit.GetComponent<playerHealth>();
-	
-		if(health != null){
-			health.TakeDamage(damage);
-		}
+			print("The Wolf is attacking");
+				//if(pcHealth != null){
+					
+
+					//pcHealth.TakeDamage(damage);
+					//pcHealth.gameObject.GetComponent<playerHealth>().TakeDamage(damage);
+		
+				}
+
+			}
 			
 	}
 
-}
+
 	
 
 
