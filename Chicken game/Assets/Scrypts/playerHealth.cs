@@ -5,17 +5,22 @@ using UnityEngine.UI;
 
 public class playerHealth : MonoBehaviour{
 
-public const int maxHealth = 10;
+	public const int maxHealth = 10;
 
-public int currentHealth = maxHealth;
+	public int currentHealth = maxHealth;
 
-public Text hp;
+	public Text hp;
 
-public Text maxHP;
+	public Text maxHP;
 
-void Update () {
-	hp.text = currentHealth.ToString();
-	maxHP.text = maxHealth.ToString();	
+	void Start () {
+		//hp = new Text ("foo");
+		//maxHP = new Text ("bar");
+	}
+
+	void Update () {
+		//hp.text = currentHealth.ToString();
+		//maxHP.text = maxHealth.ToString();	
 	}
 
 	public void TakeDamage(int amount){
